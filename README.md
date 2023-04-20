@@ -50,4 +50,4 @@ Since the values are read from Service Bus as struct (not string) we can apply t
 This 'extract' transform operates directly on the service bus envelope and extracts the value from 'messageBody' which now is just bytes. Same with the 'MessageId' field from the key which is now just a string.
 With those values in hand, we new tell Kafka the types of these values and mind you that the key is just a string so we use `"key.converter": "org.apache.kafka.connect.storage.StringConverter"` and for the payload wich is already JSON but just as bytes we just write the bytes as-is: `"value.converter": "org.apache.kafka.connect.converters.ByteArrayConverter"`.
 
-Voulà!
+Voilá!
